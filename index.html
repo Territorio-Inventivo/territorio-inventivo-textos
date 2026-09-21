@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Território Inventivo — Pequena África | Páginas de leitura</title>
+  <meta name="description" content="Páginas de leitura acessíveis do Território Inventivo — Pequena África / MUHCAB." />
+  <style>
+    :root{
+      --paper:#FCFBF8;
+      --ink:#221F1C;
+      --muted:#5C574F;
+      --orange:#E55000;
+      --teal:#229B8A;
+      --teal-dark:#137E70;
+      --rule:rgba(34,31,28,.13);
+      --card:#FFFFFF;
+    }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+      font-size:19px;
+      line-height:1.6;
+    }
+    .wrap{max-width:760px;margin:0 auto;padding:40px 22px 64px}
+    header{text-align:center;padding-bottom:28px;border-bottom:2px solid var(--rule)}
+    .logo{max-width:260px;width:60%;height:auto;display:block;margin:0 auto 22px}
+    h1{
+      color:var(--orange);
+      font-size:clamp(1.7rem,5vw,2.4rem);
+      line-height:1.2;
+      margin:0 0 .35em;
+      letter-spacing:-.01em;
+    }
+    .tagline{color:var(--muted);margin:0;font-size:1rem}
+    h2{
+      color:var(--teal);
+      font-size:1.15rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin:38px 0 14px;
+    }
+    ul.textos{list-style:none;margin:0;padding:0}
+    ul.textos li{margin:0 0 14px}
+    ul.textos a{
+      display:block;
+      background:var(--card);
+      border:1px solid var(--rule);
+      border-left:6px solid var(--teal);
+      border-radius:8px;
+      padding:16px 20px;
+      color:var(--teal-dark);
+      font-weight:600;
+      text-decoration:none;
+      transition:border-color .15s ease, transform .15s ease;
+    }
+    ul.textos a .num{
+      display:block;
+      font-size:.78rem;
+      font-weight:600;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:2px;
+    }
+    ul.textos a:hover,
+    ul.textos a:focus-visible{
+      border-left-color:var(--orange);
+      color:var(--orange);
+      transform:translateX(2px);
+    }
+    a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+    .nota{
+      margin-top:34px;
+      padding:16px 20px;
+      border-left:4px solid var(--orange);
+      background:var(--card);
+      border-radius:0 8px 8px 0;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    footer{
+      margin-top:44px;
+      padding-top:20px;
+      border-top:2px solid var(--rule);
+      color:var(--muted);
+      font-size:.88rem;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="logo_territorio_inventivo.png"
+           alt="Território Inventivo — Pequena África" />
+      <h1>Território Inventivo — Pequena África</h1>
+      <p class="tagline">Páginas de leitura acessíveis · MUHCAB</p>
+    </header>
+
+    <main>
+      <h2>Textos</h2>
+      <ul class="textos">
+        <li>
+          <a href="texto-01-linha-do-tempo.html">
+            <span class="num">Texto 01</span>Linha do Tempo do MUHCAB
+          </a>
+        </li>
+        <li>
+          <a href="texto-02-mapa-da-diaspora.html">
+            <span class="num">Texto 02</span>Mapa Digital da Diáspora
+          </a>
+        </li>
+        <li>
+          <a href="texto-03-encruzilhada.html">
+            <span class="num">Texto 03</span>Sala Encruzilhada
+          </a>
+        </li>
+        <li>
+          <a href="texto-04-verbetes-maquetes.html">
+            <span class="num">Texto 04</span>Verbetes das Maquetes
+          </a>
+        </li>
+      </ul>
+
+      <p class="nota">
+        Cada página foi construída em texto corrido, para funcionar bem com
+        leitores de tela e com o plugin <strong>VLibras</strong>. As mesmas URLs
+        atendem aos dois cenários: incorporadas ao site (widget Embed) e
+        acessadas por QR Code na exposição.
+      </p>
+    </main>
+
+    <footer>
+      Território Inventivo — Pequena África · MUHCAB
+    </footer>
+  </div>
+</body>
+</html>
