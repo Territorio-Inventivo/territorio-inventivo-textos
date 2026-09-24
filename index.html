@@ -45,20 +45,37 @@
       margin:38px 0 14px;
     }
     ul.textos{list-style:none;margin:0;padding:0}
-    ul.textos li{margin:0 0 14px}
-    ul.textos a{
-      display:block;
+    ul.textos li{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:14px;
+      margin:0 0 14px;
       background:var(--card);
       border:1px solid var(--rule);
       border-left:6px solid var(--teal);
       border-radius:8px;
-      padding:16px 20px;
+      padding:14px 18px;
+      transition:border-color .15s ease;
+    }
+    ul.textos li:hover,
+    ul.textos li:focus-within{
+      border-left-color:var(--orange);
+    }
+    ul.textos .link{
+      flex:1 1 200px;
+      display:block;
       color:var(--teal-dark);
       font-weight:600;
       text-decoration:none;
-      transition:border-color .15s ease, transform .15s ease;
+      transition:color .15s ease, transform .15s ease;
     }
-    ul.textos a .num{
+    ul.textos li:hover .link,
+    ul.textos .link:focus-visible{
+      color:var(--orange);
+      transform:translateX(2px);
+    }
+    ul.textos .num{
       display:block;
       font-size:.78rem;
       font-weight:600;
@@ -67,13 +84,37 @@
       color:var(--muted);
       margin-bottom:2px;
     }
-    ul.textos a:hover,
-    ul.textos a:focus-visible{
-      border-left-color:var(--orange);
-      color:var(--orange);
-      transform:translateX(2px);
+    ul.textos .qr{
+      flex:0 0 auto;
+      display:block;
+      line-height:0;
+    }
+    ul.textos .qr img{
+      display:block;
+      width:72px;
+      height:72px;
+      border-radius:6px;
+      border:1px solid var(--rule);
+      background:#fff;
     }
     a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+    @media (max-width:480px){
+      ul.textos li{
+        flex-direction:column;
+        align-items:stretch;
+        text-align:center;
+      }
+      ul.textos .link{
+        text-align:left;
+      }
+      ul.textos .qr{
+        align-self:center;
+      }
+      ul.textos .qr img{
+        width:104px;
+        height:104px;
+      }
+    }
     .nota{
       margin-top:34px;
       padding:16px 20px;
@@ -106,32 +147,53 @@
       <h2>Textos</h2>
       <ul class="textos">
         <li>
-          <a href="texto-01-linha-do-tempo.html">
+          <a class="link" href="texto-01-linha-do-tempo.html">
             <span class="num">Texto 01</span>Linha do Tempo do MUHCAB
           </a>
+          <span class="qr">
+            <img src="qrcodes/qr-texto-01-linha-do-tempo.png"
+                 alt="QR Code de acesso à página Linha do Tempo do MUHCAB"
+                 loading="lazy" width="72" height="72" />
+          </span>
         </li>
         <li>
-          <a href="texto-02-mapa-da-diaspora.html">
+          <a class="link" href="texto-02-mapa-da-diaspora.html">
             <span class="num">Texto 02</span>Mapa Digital da Diáspora
           </a>
+          <span class="qr">
+            <img src="qrcodes/qr-texto-02-mapa-da-diaspora.png"
+                 alt="QR Code de acesso à página Mapa Digital da Diáspora"
+                 loading="lazy" width="72" height="72" />
+          </span>
         </li>
         <li>
-          <a href="texto-03-encruzilhada.html">
+          <a class="link" href="texto-03-encruzilhada.html">
             <span class="num">Texto 03</span>Sala Encruzilhada
           </a>
+          <span class="qr">
+            <img src="qrcodes/qr-texto-03-encruzilhada.png"
+                 alt="QR Code de acesso à página Sala Encruzilhada"
+                 loading="lazy" width="72" height="72" />
+          </span>
         </li>
         <li>
-          <a href="texto-04-verbetes-maquetes.html">
+          <a class="link" href="texto-04-verbetes-maquetes.html">
             <span class="num">Texto 04</span>Verbetes das Maquetes
           </a>
+          <span class="qr">
+            <img src="qrcodes/qr-texto-04-verbetes-maquetes.png"
+                 alt="QR Code de acesso à página Verbetes das Maquetes"
+                 loading="lazy" width="72" height="72" />
+          </span>
         </li>
       </ul>
 
       <p class="nota">
-        Cada página foi construída em texto corrido, para funcionar bem com
-        leitores de tela e com o plugin <strong>VLibras</strong>. As mesmas URLs
-        atendem aos dois cenários: incorporadas ao site (widget Embed) e
-        acessadas por QR Code na exposição.
+        Cada página foi construída em texto corrido, pensada para funcionar
+        bem com leitores de tela. As mesmas URLs atendem aos dois cenários:
+        incorporadas ao site (widget Embed) e acessadas por QR Code na
+        exposição — o mesmo código também está disponível ao lado de cada
+        link acima.
       </p>
     </main>
 
