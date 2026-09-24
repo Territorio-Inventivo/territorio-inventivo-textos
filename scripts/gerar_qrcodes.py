@@ -15,7 +15,7 @@ from pathlib import Path
 import qrcode
 from qrcode.constants import ERROR_CORRECT_Q
 
-BASE_URL = "https://joaopauloponte.github.io/territorio-inventivo-textos"
+BASE_URL = "https://territorio-inventivo.github.io/territorio-inventivo-textos"
 
 # (arquivo html, nome do PNG de saida, titulo legivel)
 PAGINAS = [
