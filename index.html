@@ -35,7 +35,8 @@
       margin:0 0 .35em;
       letter-spacing:-.01em;
     }
-    .tagline{color:var(--muted);margin:0;font-size:1rem}
+    .tagline{color:var(--muted);margin:0 0 14px;font-size:1rem}
+    .cta{color:var(--teal-dark);margin:0;font-size:1.05rem;font-weight:700}
     h2{
       color:var(--teal);
       font-size:1.15rem;
@@ -44,35 +45,18 @@
       margin:38px 0 14px;
     }
     ul.textos{list-style:none;margin:0;padding:0}
-    ul.textos li{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:14px;
-      margin:0 0 14px;
+    ul.textos li{margin:0 0 14px}
+    ul.textos .link{
+      display:block;
       background:var(--card);
       border:1px solid var(--rule);
       border-left:6px solid var(--teal);
       border-radius:8px;
-      padding:14px 18px;
-      transition:border-color .15s ease;
-    }
-    ul.textos li:hover,
-    ul.textos li:focus-within{
-      border-left-color:var(--orange);
-    }
-    ul.textos .link{
-      flex:1 1 200px;
-      display:block;
+      padding:16px 20px;
       color:var(--teal-dark);
       font-weight:600;
       text-decoration:none;
-      transition:color .15s ease, transform .15s ease;
-    }
-    ul.textos li:hover .link,
-    ul.textos .link:focus-visible{
-      color:var(--orange);
-      transform:translateX(2px);
+      transition:border-color .15s ease, transform .15s ease;
     }
     ul.textos .num{
       display:block;
@@ -83,37 +67,13 @@
       color:var(--muted);
       margin-bottom:2px;
     }
-    ul.textos .qr{
-      flex:0 0 auto;
-      display:block;
-      line-height:0;
-    }
-    ul.textos .qr img{
-      display:block;
-      width:136px;
-      height:136px;
-      border-radius:6px;
-      border:1px solid var(--rule);
-      background:#fff;
+    ul.textos .link:hover,
+    ul.textos .link:focus-visible{
+      border-left-color:var(--orange);
+      color:var(--orange);
+      transform:translateX(2px);
     }
     a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
-    @media (max-width:480px){
-      ul.textos li{
-        flex-direction:column;
-        align-items:stretch;
-        text-align:center;
-      }
-      ul.textos .link{
-        text-align:left;
-      }
-      ul.textos .qr{
-        align-self:center;
-      }
-      ul.textos .qr img{
-        width:168px;
-        height:168px;
-      }
-    }
     footer{
       margin-top:44px;
       padding-top:20px;
@@ -130,7 +90,11 @@
       <img class="logo" src="logo_territorio_inventivo.png"
            alt="Território Inventivo — Pequena África" />
       <h1>Território Inventivo — Pequena África</h1>
-      <p class="tagline">Páginas de leitura acessíveis · MUHCAB</p>
+      <p class="tagline">
+        Consulte os conteúdos acessíveis para leitores de tela da Exposição
+        Território Inventivo — Pequena África no MUHCAB.
+      </p>
+      <p class="cta">Acesse agora!</p>
     </header>
 
     <main>
@@ -140,41 +104,21 @@
           <a class="link" href="texto-01-linha-do-tempo.html">
             <span class="num">Texto 01</span>Linha do Tempo do MUHCAB
           </a>
-          <span class="qr">
-            <img src="qrcodes/qr-texto-01-linha-do-tempo.png"
-                 alt="QR Code de acesso à página Linha do Tempo do MUHCAB"
-                 loading="lazy" width="136" height="136" />
-          </span>
         </li>
         <li>
           <a class="link" href="texto-04-verbetes-maquetes.html">
             <span class="num">Texto 02</span>Verbetes das Maquetes
           </a>
-          <span class="qr">
-            <img src="qrcodes/qr-texto-04-verbetes-maquetes.png"
-                 alt="QR Code de acesso à página Verbetes das Maquetes"
-                 loading="lazy" width="136" height="136" />
-          </span>
         </li>
         <li>
           <a class="link" href="texto-03-encruzilhada.html">
             <span class="num">Texto 03</span>Sala Encruzilhada
           </a>
-          <span class="qr">
-            <img src="qrcodes/qr-texto-03-encruzilhada.png"
-                 alt="QR Code de acesso à página Sala Encruzilhada"
-                 loading="lazy" width="136" height="136" />
-          </span>
         </li>
         <li>
           <a class="link" href="texto-02-mapa-da-diaspora.html">
             <span class="num">Texto 04</span>Mapa Digital da Diáspora
           </a>
-          <span class="qr">
-            <img src="qrcodes/qr-texto-02-mapa-da-diaspora.png"
-                 alt="QR Code de acesso à página Mapa Digital da Diáspora"
-                 loading="lazy" width="136" height="136" />
-          </span>
         </li>
       </ul>
     </main>
